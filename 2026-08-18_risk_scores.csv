@@ -1,0 +1,6 @@
+risk_score_id,account_id,large_transaction_score,rapid_transaction_score,device_score,location_score,dormant_score,beneficiary_score,total_score,risk_level,calculation_date
+8,1,0,45,0,0,0,0,45,HIGH,2026-08-18
+9,2,0,0,0,0,0,0,0,LOW,2026-08-18
+10,3,0,0,0,0,0,0,0,LOW,2026-08-18
+11,4,0,0,0,0,0,0,0,LOW,2026-08-18
+12,5,0,0,0,0,0,0,0,LOW,2026-08-18
