@@ -1,0 +1,38 @@
+FRAUDNET - Fraud Detection System
+=================================
+Date: 2026-08-18
+Database: fraudnet_db (MySQL 8.0)
+
+TABLES CREATED:
+1. customer - Customer information
+2. account - Bank accounts
+3. financial_transaction - All transactions
+4. location - Geographic locations
+5. device - Device/IP tracking
+6. suspicious_transaction - Fraud alerts
+7. risk_score - Account risk levels
+8. fraud_case - Investigation cases
+9. account_relationship - Account connections
+
+FRAUD DETECTION RULES:
+1. RAPID_TRANSACTION - Multiple transactions within 10 minutes
+2. LARGE_TRANSACTION - Amount > 5x account average
+3. SHARED_DEVICE - Device used by multiple customers
+4. CIRCULAR_TRANSFER - Money returns to origin account
+
+REPORTS GENERATED:
+1. suspicious_transactions.csv - All fraud alerts
+2. risk_scores.csv - Account risk levels
+3. daily_summary.csv - Daily transaction summary
+4. high_risk_accounts.csv - Accounts needing attention
+5. circular_transfers.csv - Circular money movement
+
+KEY FINDINGS:
+- Total transactions: [run: SELECT COUNT(*) FROM financial_transaction;]
+- Suspicious transactions: [run: SELECT COUNT(*) FROM suspicious_transaction;]
+- High-risk accounts: [run: SELECT COUNT(*) FROM risk_score WHERE risk_level IN ('HIGH','VERY HIGH','CRITICAL');]
+
+NEXT STEPS:
+- Add more detection rules (velocity, geographic anomaly)
+- Automate with MySQL Event Scheduler
+- Integrate with email alerts
